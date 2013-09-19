@@ -1,0 +1,58 @@
+body 
+{
+	background-color: #666633;
+    font-family: "SimSun", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 18px;
+    margin: 5% 20% 5% 20%;
+    padding: 2% 5% 5% 5%;
+    width: 50%;
+    line-height: 150%;
+    border: 1px solid LightGrey;
+}
+
+
+			input.botton1{
+			border:1 solid black;
+			FONT-SIZE: 15px; 
+			FONT-STYLE: normal; 
+			FONT-VARIANT: normal; 
+			FONT-WEIGHT: normal; 
+			HEIGHT: 22px; 
+			LINE-HEIGHT: normal; 
+			cursor:pointer; 
+		}
+
+		a
+		{
+		
+			text-decoration:none;
+			color:black;
+			background-color:gray;
+			padding:0.2em 0.6em;
+		}
+
+		a.title
+		{
+			font-size: 18px;
+		}
+
+		a:hover 
+		{
+			background-color:#CDC9C9
+		}
+
+		textarea
+		{
+			background-color: #D3D3D3;
+			resize:none;border: 
+			ridge #4D4D4D;
+			width:800px;
+            height:90px;
+		}					
+
+		td.content
+		{
+			width: 800px; 
+			font-size:14px; 
+			border: ridge #4D4D4D
+		}

@@ -1,0 +1,78 @@
+<style >
+#songlist {
+width:125px;
+height:40px;
+overflow:auto;
+float:left;clear:right;border:1px solid #669933;
+}
+#songlist ul {
+margin:0;
+padding:0;
+list-style:none;
+}
+#songlist ul li {
+list-style-type:none;
+}
+#music1 {
+width:125px;
+text-align:left;
+}
+<html>
+</body>
+
+</style>
+<div id="music1">
+<object classid="clsid:6BF52A52-394A-11D3-B153-00C04F79FAA6" id="mediaPlayer" width="125" height="42">
+      <param name="url" value="">
+      <param name="animationatStart" value="true">
+      <param name="transparentatStart" value="true">
+      <param name="autoStart" value="false">
+      <param name="showControls" value="true">
+      <param name="loop" value="true">
+</object>
+</div>
+播放状态: <span style="color:red" id="Text"></span> <br>
+播放进度: <span style="color:red" id="Timer"></span> <br>
+<div id="songlist">
+<ul>
+<li><a href="http://2.2pb.cn/myfile/hls86/cry-on-my-should.wma" onclick="PlayIt(this.href,'Silver Stream(cry-on-my-should)');return false">cry-on-my-should</a></li>
+<li><a href="http://jbbs.joins.com/pds/bbs28/20041111044356647.WMA" onclick="PlayIt(this.href,'Tammy Wynette Stand');return false">Tammy Wynette Stand</a></li>
+<li><a href="http://www.hpzc.com/music/RIGHT HERE WAITING.mp3" onclick="PlayIt(this.href,'此情可待');return false">此情可待</a></li>
+<li><a href="http://202.115.144.251/C53/Course/Content/N20/res/200712072042[21489].mp3" onclick="PlayIt(this.href,'More Than I Can Say');return false">More Than I Can Say</a></li>
+<li><a href="http://www.yoooca.com/File/Hey Jude_3.mp3" onclick="PlayIt(this.href,'hey jude');return false">hey jude </a></li>
+<li><a href="http://www1.ehappystudy.com/English/ywgq/song/When I Need You.mp3" onclick="PlayIt(this.href,'when i need you');return false">when i need you</a></li>
+<li><a href="http://www.mydcentre.com/club/dsdgef98hf9hgtn667jdfjdkd4hh4ruIjirijwKn54Hn/luoluo_paulmauriat_tombelaneige.mp3" onclick="PlayIt(this.href,'Tombe La Neige Paul Mau');return false">Tombe La Neige Paul Mau</a></li>
+<li><a href="http://222.92.21.147/sudaceo/bbs/song2/women_in_love.mp3" onclick="PlayIt(this.href,'women_in_love');return false">women_in_love</a></li>
+<li><a href="http://download.playcast.ru/uploads/2006/06/07/35646.mp3" onclick="PlayIt(this.href,'when you told me you lo');return false">when you told me you love</a></li>
+</ul>
+</div>
+
+</body>
+</html>
+<script type="text/javascript"> 
+<!--
+function PlayIt(thesong,title){
+document.getElementByIdx_x("music1").innerHTML='<object id="mediaPlayer" width="125" height="45" '
+      'classid="clsid:6BF52A52-394A-11D3-B153-00C04F79FAA6">'
+      '<param name="url" value="' thesong '">'
+      '<param name="animationatStart" value="true">'
+      '<param name="transparentatStart" value="true">'
+      '<param name="autoStart" value="true">'
+      '<param name="showControls" value="true">'
+      '<param name="loop" value="true">'
+      '<param name="PlayCount" value="5">'
+      '</object><br><div align=left>目前拨放名称：'
+      '' title '</div>';
+}
+function MusicPlay() {
+var MTypes=document.mediaPlayer.playState;
+//document.getElementByIdx_x("Text").innerHTML=MTypes;
+document.getElementByIdx_x("Timer").innerHTML=document.mediaPlayer.controls.currentPositionString;
+// '｜' document.mediaPlayer.currentMedia.durationString;
+//alert(document.mediaPlayer.controls.currentPositionString);
+var arystr= new Array('未知','停止','暂停中','正在播放','向前搜索','缓冲中','等待中','播放完毕','转换曲目','准备就绪');
+document.getElementByIdx_x("Text").innerHTML=arystr[MTypes];
+window.setTimeout("MusicPlay()",1000);
+}
+//-->
+</script>
